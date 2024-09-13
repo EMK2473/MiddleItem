@@ -9,23 +9,25 @@ public class MiddleItem {
       int[] userValues = new int[9]; 
       int count = 0;    
 
-      for(int i = 0; i < userValues.length; ++i) {
-        userValues[i] = scnr.nextInt();
+      while(scnr.hasNextInt()){
+        int input = scnr.nextInt();
 
-        if(userValues[i] < 0){
-            System.out.println(userValues[i] + " is not positive");
+        if(input < 0){
             break;
         }
+
+        if(count >= 9) {
+            System.out.println("Too many numbers");
+            scnr.close();
+            return;
+        }
+
+        userValues[count] = input;
         count++;
         System.out.println("count: " + count);
       }
-      if(count > 9) {
-        System.out.println("Too many numbers");
-      }
-      else if (count > 0){
-        for(int i = 0; i < count; ++i){
-            System.out.print(userValues[i] + " ");
-        }
+      
+      if (count > 0){
         int midIndex = count / 2;
         System.out.println("Middle item: " + userValues[midIndex]);
 
