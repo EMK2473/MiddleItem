@@ -12,7 +12,7 @@
 - [Tests Commands](#tests-commands)
 - [Questions](#questions)
 ## Description
-The MiddleItem program reads a sequence of up to 9 positive integers from user input. It outputs the middle value of the input list. The input ends when a negative number is entered or after 9 integers. If more than 9 integers are input, the program will display an error message.
+The MiddleItem program reads a sequence of up to 9 positive integers from user input, terminated by a negative number or until the array is filled. The program then outputs either the middle item if the number of inputs is odd, or the two middle items if the number of inputs is even. If more than 9 numbers are entered, the program outputs an error message.
 
 ## Installation Requirements
 Ensure you have Java Development Kit (JDK) installed on your system. You can download it from [Oracle](https://www.oracle.com/java/technologies/downloads/) or use a package manager like Homebrew for macOS or apt-get for Linux. 
@@ -36,15 +36,26 @@ Ensure you have Java Development Kit (JDK) installed on your system. You can dow
 ```
 
 ## Application Usage
-The program accepts a sequence of up to 9 positive integers as input. Input ends when a negative number is entered, or when 9 integers are provided. The program outputs the middle item in the list of input numbers. If the number of inputs exceeds 9, the program displays a message saying "Too many numbers" and exits. Example: 
+The program accepts up to 9 positive integers as input.
+Input is terminated when either a negative number is entered or the list reaches 9 numbers.
+The program outputs the middle item if the count of inputs is odd, or the two middle items if the count is even.
+If more than 9 numbers are provided, the program outputs "Too many numbers" and exits. Example: 
 
-Input:
+Input (Odd Count):
 ```Java
 12 45 67 89 23 56 78 91 34 
 ```
 Output:
 ```Java
 Middle item: 56 
+```
+Input (Even Count):
+```Java
+12 45 67 89 23 56 
+```
+Output:
+```Java
+Two middle items: 67 89 
 ```
 Example Input with Early Termination: 
 ```Java
