@@ -26,6 +26,8 @@ public class MiddleItem {
         for(int i = 0; i < count; ++i){
             System.out.print(userValues[i] + " ");
         }
+        int midIndex = count / 2;
+        System.out.println("Middle item: " + userValues[midIndex]);
 
       }
 
