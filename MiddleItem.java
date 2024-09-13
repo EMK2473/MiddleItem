@@ -26,10 +26,13 @@ public class MiddleItem {
         count++;
       }
       
-      if (count > 0){
+      if (count > 0 && count % 2 != 0){
         int midIndex = count / 2;
         System.out.println("Middle item: " + userValues[midIndex]);
-
+      } else {
+        int midIndex1 = (count / 2) - 1;
+        int midIndex2 = (count / 2);
+        System.out.println("Two middle items: " + userValues[midIndex1] + " " + userValues[midIndex2]);
       }
       System.out.println();
       scnr.close();
