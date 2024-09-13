@@ -24,7 +24,6 @@ public class MiddleItem {
 
         userValues[count] = input;
         count++;
-        System.out.println("count: " + count);
       }
       
       if (count > 0){
@@ -32,6 +31,7 @@ public class MiddleItem {
         System.out.println("Middle item: " + userValues[midIndex]);
 
       }
-
+      System.out.println();
+      scnr.close();
    }
 }
