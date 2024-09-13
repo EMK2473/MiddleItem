@@ -1,5 +1,6 @@
 package MiddleItem;
 
+import java.lang.classfile.instruction.StackInstruction;
 import java.util.Scanner; 
 
 public class MiddleItem {
@@ -17,7 +18,16 @@ public class MiddleItem {
         }
         count++;
         System.out.println("count: " + count);
+      }
+      if(count > 9) {
+        System.out.println("Too many numbers");
+      }
+      else if (count > 0){
+        for(int i = 0; i < count; ++i){
+            System.out.print(userValues[i] + " ");
+        }
 
       }
+
    }
 }
