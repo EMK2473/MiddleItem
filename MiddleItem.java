@@ -1,6 +1,5 @@
 package MiddleItem;
 
-import java.lang.classfile.instruction.StackInstruction;
 import java.util.Scanner; 
 
 public class MiddleItem {
